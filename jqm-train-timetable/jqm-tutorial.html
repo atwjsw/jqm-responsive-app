@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 初始化移动设备显示， 视口设置为与浏览器的默认宽度一致，缩放比例为1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.3.css">
+    <title>基本的页面</title>
+</head>
+
+<body>
+    <div data-role="page" id="index">
+        <div data-role="header" data-position="fixed">
+            <h1>我是标题1</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <!-- <p>我是内容1</p>
+            <p><a href="#index2" data-transition="none">index2</a></p>
+            <a href="#" class="ui-btn">我是按钮</a>
+            <input type="submit" value="我也是按钮">
+            <a href="#" class="ui-btn ui-btn-inline ui-btn-a ui-corner-all ui-shadow">并排按钮</a>
+            <a href="#" class="ui-btn ui-btn-inline ui-btn-b ui-corner-all ui-shadow">并排按钮</a> -->
+            <a href="#" class="ui-btn" id="ajaxbtn">点我加载</a>
+            <form>
+                <div class="ui-field-contain">
+                    <label>发车站</label>
+                    <input type="text">
+                </div>
+                <div class="ui-field-contain">
+                    <label>到达站</label>
+                    <input type="text">
+                </div>
+                <div class="ui-field-contain">
+                    <label>车次</label>
+                    <input type="text">
+                </div>
+            </form>
+            <!-- <table data-role="table" data-model="reflow" class="ui-reponsive table-stroke"> -->
+            <table data-role="table" data-mode="reflow" class="ui-responsive">
+                <thead>
+                    <tr>
+                        <th>第一列</th>
+                        <th>第二列</th>
+                        <th>第三列</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>123</td>
+                        <td>456</td>
+                        <td>789</td>
+                    </tr>
+                    <tr>
+                        <td>123</td>
+                        <td>456</td>
+                        <td>789</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul data-role="listview" data-inset="true">
+                <li>
+                    <a href="#">
+                        <h2>G1次</h2>
+                        <p>北京南 - 上海虹桥</p>
+                        <p>用时：4：48</p>
+                        <p class="ui-li-aside">09:00:00 开</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h2>G1次</h2>
+                        <p>北京南 - 上海虹桥</p>
+                        <p>用时：4：48</p>
+                        <p class="ui-li-aside">09:00:00 开</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h2>G1次</h2>
+                        <p>北京南 - 上海虹桥</p>
+                        <p>用时：4：48</p>
+                        <p class="ui-li-aside">09:00:00 开</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h2>G1次</h2>
+                        <p>北京南 - 上海虹桥</p>
+                        <p>用时：4：48</p>
+                        <p class="ui-li-aside">09:00:00 开</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <h2>G1次</h2>
+                        <p>北京南 - 上海虹桥</p>
+                        <p>用时：4：48</p>
+                        <p class="ui-li-aside">09:00:00 开</p>
+                    </a>
+                </li>
+            </ul>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="camera">item1</a></li>
+                        <li><a href="#" data-icon="carat-d">item2</a></li>
+                        <li><a href="#" data-icon="carat-l">item3</a></li>
+                        <li><a href="#" data-icon="carat-r">item4</a></li>
+                        <li><a href="#" data-icon="carat-u">item5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="index2">
+        <div data-role="header">
+            <h1>我是标题2</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <p>我是内容2</p>
+            <p><a href="#index">index</a></p>
+        </div>
+        <div data-role="footer">
+            我是页脚2
+        </div>
+    </div>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/jquery.mobile-1.4.3.js"></script>
+    <script>
+    //页面初始化触发
+    // $(document).on("pagebeforecreate", function() {
+    //     alert("pagebeforecreate");
+    // });
+    // $(document).on("pagecreate", function() {
+    //     alert("pagecreate");
+    // });
+    // $(document).on("pageinit", function() {
+    //     alert("pageinit");
+    // });
+
+    // 每次切换触发
+    // $(document).on("pagebeforehide", "#index", function() {
+    //     alert("pagebeforehide");
+    // });
+
+    // $(document).on("pagehide", "#index", function() {
+    //     alert("pagehide");
+    // });
+
+    // $(document).on("pagebeforeshow", "#index2", function() {
+    //     alert("pagebeforeshow");
+    // });
+
+    // $(document).on("pageshow", "#index2", function() {
+    //     alert("pageshow");
+    // });
+
+    var url = "http://cors.itxti.net/?www.webxml.com.cn/WebServices/TrainTimeWebService.asmx/getDetailInfoByTrainCode?UserID=";
+
+    $("#ajaxbtn").on("click", function() {
+        $.mobile.loading("show");
+        $.get(url, {
+            TrainCode: 'G1'
+        }, function(data) {
+            console.log(data);
+            $.mobile.loading("hide");
+        });
+    });
+    </script>
+</body>
+
+</html>

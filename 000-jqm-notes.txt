@@ -1,0 +1,16 @@
+jQM Web App –列车时刻表
+
+- 简介：jQuery Mobile 是创建移动WEB应用程序的框架，使用广泛。本课程通过一个列车时刻表的简单案例，讲解了jQMobile的页面、事件、按钮、图标、导航栏、网格、列表、表单、Ajax等主要组件的使用方法，通过案例学习，举一反三，基本上可以开发简单的Web App应用。
+
+#Web App
+- 开发、升级简单
+- 不需要考虑跨平台
+- 使用html5
+-JQM   比原生程序运行慢：在我看来最大的缺点是，即使是在最新的Android和iOS硬件上（双核Tegra 2 Android手机，双核iPad2平板），JQuery Mobile应用程序都会明显慢于原生程序。尤其是在Android上，
+
+#jQM
+- jQuery Mobile : 是jQuery在手机上和平板设备上的版本，是创建移动Web App的框架。
+- HTML5 + CSS3
+- 解决了浏览器兼容，屏蔽了浏览器间的差异
+- 通过HTML5 data-*属性为移动设备创建交互外观
+- jQM中，可以在单一HTML中创建多个页面; 需要通过唯一的id来分隔每张页面，并使用href属性来连接彼此
